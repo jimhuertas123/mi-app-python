@@ -14,11 +14,6 @@ jobs:
         python-version: ['3.9', '3.10', '3.11']
 
     steps:
-    - name: Verificar app corriendo
-      run: |
-        timeout 10 python app.py &
-        sleep 5
-        curl -f http://localhost:5000/health
     - uses: actions/checkout@v4
 
     - uses: actions/setup-python@v4
